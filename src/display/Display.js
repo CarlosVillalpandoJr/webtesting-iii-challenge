@@ -5,7 +5,7 @@ const Display = ({ closed, locked }) => {
   const lockedClass = `led ${locked ? 'red-led' : 'green-led'}`;
 
   return (
-    <div className="display panel">
+    <div className="display panel" data-testid='display-panel'>
       <div data-testid='lock-unlock-button' className={lockedClass}>{locked ? 'Locked' : 'Unlocked'}</div>
       <div data-testid='open-close-button' className={closedClass}>{closed ? 'Closed' : 'Open'}</div>
     </div>
